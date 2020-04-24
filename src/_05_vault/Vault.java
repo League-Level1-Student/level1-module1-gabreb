@@ -1,19 +1,18 @@
 package _05_vault;
 
+import java.util.Random;
+
 public class Vault {
 	private int secretCode;
 	public boolean tryCode(int guess) {
-		return false;
+		return secretCode == guess;
 	}
-	public class JamesBond {
-		public void findCode(int vault) {
-			
-		}
+	
+	Vault() {
+		secretCode = new Random().nextInt(1000000);
+		System.out.println(secretCode);
 	}
-	public static void main(String[] args) {
-		Vault v = new Vault();
-		v.tryCode(3);
-	}
+
 	
 }
 
